@@ -1,6 +1,10 @@
 class Player
-    name
-    symbol
+    attr_accessor :name, :symbol
+
+    def initialize(name, symbol)
+        @name = name
+        @symbol = symbol
+    end
 end
 
 
@@ -45,12 +49,8 @@ def play_round (board)
 end
 
 def player_names
-    player1 = player.new('','X')
-    player2 = player.new('','O')
-
-    puts "Please enter name for player 1"
-    player1.name = gets.chomp
-
+    puts 'Please enter name for player 1'
+    player1 = Player.new(player1.name = gets.chomp,'X')
     puts 'Please enter name for player 2'
-    player2.name = gets.chomp
+    player2 = Player.new(player2.name = gets.chomp,'O')
 end
